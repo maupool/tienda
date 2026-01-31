@@ -4,7 +4,6 @@
  */
 package com.tienda.domain;
 
-import com.google.firebase.database.annotations.NotNull;
 import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,7 +11,12 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.NotNull;
+
+
 import java.io.Serializable;
+
+
 import lombok.Data;
 @Data
 @Entity
