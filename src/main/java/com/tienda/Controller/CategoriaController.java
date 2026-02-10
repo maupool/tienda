@@ -1,7 +1,7 @@
 package com.tienda.controller;
 
 import com.tienda.domain.Categoria;
-import com.tienda.service.CategoryService;
+import com.tienda.service.CategoriaService;
 import jakarta.validation.Valid;
 import java.util.Locale;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public class CategoriaController
 {
 
     @Autowired
-    private CategoryService categoriaService;
+    private CategoriaService categoriaService;
 
     @GetMapping("/listado")
     public String inicio(Model model) {
