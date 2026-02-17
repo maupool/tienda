@@ -9,12 +9,14 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Size;
 import jakarta.validation.constraints.NotNull;
 
 
 import java.io.Serializable;
+import java.util.List;
 
 
 import lombok.Data;
@@ -40,6 +42,10 @@ public class Categoria {
     @Column (name = "activo")
     private Boolean activo;
 
+    
+    @OneToMany(mappedBy = "categoria")
+    private List<Producto> producto;
+    
     public void setRutaImagen(String rutaImagen) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
@@ -47,4 +53,5 @@ public class Categoria {
     public Integer getIdCategoria() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+    
 }
