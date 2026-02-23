@@ -1,0 +1,27 @@
+<html xmlns="https://wwww.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6">    
+    
+    <head th:fragment="head">
+        <title>practica</title>
+        <meta charset="UTF-8"/>
+        
+        
+        
+        <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+        <link th:href="@{/webjars/font-awesome/css/all.css}" rel="stylesheet"/>
+        <script th:href="@{/js/rutinas.js}"></script>
+        <script th:href="@{/webjars/jquery/jquery.min.js}"></script>
+        <script th:href="@{/webjars/popper.js/umd/popper.min.js}"></script>
+        <script th:href="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    </head>
+    
+    <body>
+        <header th:replace="-{general/fragmentos :: header}"></header>
+        
+        <section th:replace="-{consultas/fragmentos :: tabs}"/>  
+        <section th:replace="-{consultas/fragmentos :: tarjetas}"/>
+        <footer th:replace="-{general/fragmentos :: footer}"/>
+        
+    </body>
+</html>
